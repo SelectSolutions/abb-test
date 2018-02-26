@@ -1,3 +1,4 @@
+Mod 20180226 16:29
 //If([USERLINK_LINEBUILDER_MATCH]=false,URLRoot() & "db/" & [_DBID_TASK_MANAGER] & "?a=API_GenAddRecordForm&_fid_52=" & URLEncode ([Record ID#])
 //KP mod start
 If((User()=ToUser("kevin@select-services.net") or [USERLINK_LINEBUILDER_MATCH]=true and [USERLINK_INSTALL_SITE_MATCH]=true and [USERLINK_COMMODITY_MATCH]=true and [USERLINK_LEAD_VEHICLE_MATCH]=true),URLRoot() & "db/" & [_DBID_TASK_MANAGER] & "?a=API_GenAddRecordForm&_fid_52=" & URLEncode ([Record ID#])
