@@ -1,0 +1,17 @@
+var number alerti = If([Servo - Gun package] = "" and ([Gun count: Carried weld guns] > 0 or [Gun count: Pedestal weld guns] > 0),1,0);
+
+var number alertii = If(([Servo - Gun package] = "Weld Gun" and ([Loom_type] <> "S-SW/MH") and (([Track motion - Family] <> "" or [Track motion - Family] <> "N/A") or [Gun count: Carried weld guns] = 0 or [Gun count: Pedestal weld guns] > 0 or [Gun count: Rivet guns] > 0)),1,0);
+
+var number alertiii = If(([Servo - Gun package] = "Pedestal Gun" and ([Loom_type] <> "MH") and (([Track motion - Family] <> "" and [Track motion - Family] <> "N/A") or [Gun count: Carried weld guns] > 0 or [Gun count: Pedestal weld guns] <> 1 or [Gun count: Rivet guns] > 0)),1,0);
+
+var number alertiv = If(([Servo - Gun package] = "Weld Gun + Track Motion" and ([Loom_type]<>"S-SW/MH") and (([Track motion - Family] <> "" and [Track motion - Family] <> "N/A") or [Gun count: Carried weld guns] =0 or [Gun count: Pedestal weld guns] > 1 or [Gun count: Rivet guns] > 0)),1,0);
+
+var number alertv = If(([Servo - Gun package] = "Weld Gun + Pedestal Gun" and ([Loom_type] <> "S-SW/MH") and (([Track motion - Family] <> "" and [Track motion - Family] <> "N/A") or [Gun count: Carried weld guns] = 0 or [Gun count: Pedestal weld guns] <> 1 or [Gun count: Rivet guns] > 1)),1,0);
+
+var number alertvi = If(([Servo - Gun package] = "Twin Pedestal Guns" and ([Loom_type] <> "MH") and (([Track motion - Family] <> "" and [Track motion - Family] <> "N/A") or [Gun count: Carried weld guns] > 0 or [Gun count: Pedestal weld guns] <> 2 or [Gun count: Rivet guns] > 0)),1,0);
+
+var number alertvii = If(([Servo - Gun package] = "Pedestal Gun + Track Motion" and ([Loom_type] <> "MH") and (([Track motion - Family] <> "" and [Track motion - Family] <> "N/A") or [Gun count: Carried weld guns] > 0 or [Gun count: Pedestal weld guns] <> 1 or [Gun count: Rivet guns] > 0)),1,0);
+
+var number alertviii = If(([Servo - Gun package] = "Pedestal Gun + Track Motion" and ([Loom_type] <> "MH") and (([Track motion - Family] <> "" and [Track motion - Family] <> "N/A") or [Gun count: Carried weld guns] > 0 or [Gun count: Pedestal weld guns] <> 2 or [Gun count: Rivet guns] > 0)),1,0);
+
+$alerti+$alertii+$alertiii+$alertiv+$alertv+$alertvi+$alertvii+$alertviii
